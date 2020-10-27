@@ -1,0 +1,20 @@
+﻿<Window x:Class="Apllication1.WindowAP"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Apllication1"
+        mc:Ignorable="d"
+        Title="WindowAP" Height="323.659" Width="315.931">
+    <Grid Margin="0,0,0,-4">
+        <DockPanel Margin="0,0,0,263">
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_Fermer" Click="MenuItem_Click_Close">
+
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+        <Label Content="Créer par FALCHETTO MARC" HorizontalAlignment="Left" Height="88" Margin="72,84,0,0" VerticalAlignment="Top" Width="164"/>
+
+    </Grid>
+</Window>

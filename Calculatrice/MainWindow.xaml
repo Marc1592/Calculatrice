@@ -1,0 +1,51 @@
+﻿<Window x:Class="Calculatrice.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculatrice"
+        mc:Ignorable="d"
+        Title="CALCULATRICE" Height="377" Width="654">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Fichier">
+                <MenuItem Header="_Nouveau" Click="MenuItem_Click"/>
+                <MenuItem Header="_Ouvrir" Click="MenuItem_Click_1"/>
+                <MenuItem Header="_Sauvegarder" Click="MenuItem_Click_2"/>
+                <Separator />
+                <MenuItem Header="_Quitter" Click="MenuItem_Click_3"/>
+            </MenuItem>
+            <MenuItem Header="_A propos" Click="MenuItem_Click_4">
+
+            </MenuItem>
+
+        </Menu>
+        <Grid Margin="0,0,2,18" Width="648">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="8*"/>
+                <ColumnDefinition Width="8*"/>
+                <ColumnDefinition Width="157*"/>
+                <ColumnDefinition Width="475*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Entrer le premier nombre" HorizontalAlignment="Left" Margin="37,75,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="2"/>
+            <TextBox KeyDown="total_KeyDown" x:Name="nombreA" HorizontalAlignment="Left" Height="23" Margin="46,78,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="137" Grid.Column="3"/>
+            <Label Content="Entrer le second nombre" HorizontalAlignment="Left" Margin="40,109,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="2"/>
+            <TextBox KeyDown="total_KeyDown" x:Name="nombreB" HorizontalAlignment="Left" Height="23" Margin="46,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="137" Grid.Column="3"/>
+            <Button Content="Calculer" HorizontalAlignment="Left" Margin="66,186,0,0" VerticalAlignment="Top" Width="102" Click="Button_Click" Height="30" FontWeight="Bold" Grid.Column="3"/>
+            <Label x:Name="Total" Content="" HorizontalAlignment="Left" Margin="35,232,0,0" VerticalAlignment="Top" Width="162" Background="LightGreen" Height="55" BorderBrush="Gray" BorderThickness="1" FontSize="30" Grid.Column="3"/>
+            <Label Content="TOTAL   =" HorizontalAlignment="Left" Margin="40,241,0,0" VerticalAlignment="Top" FontWeight="Black" RenderTransformOrigin="0.88,2.192" Height="39" Width="123" FontSize="20" BorderBrush="Gray" BorderThickness="1" Grid.ColumnSpan="2" Grid.Column="2"/>
+            <RadioButton x:Name="addi" Content="+" HorizontalAlignment="Left" Margin="70,157,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" IsChecked="True" Grid.Column="2"/>
+            <RadioButton x:Name="soust" Content="-" HorizontalAlignment="Left" Margin="133,157,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Grid.Column="2"/>
+            <RadioButton x:Name="multi" Content="*" HorizontalAlignment="Left" Margin="46,157,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Grid.Column="3"/>
+            <RadioButton x:Name="div" Content="/" HorizontalAlignment="Left" Margin="115,157,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Grid.Column="3"/>
+
+            <ListBox x:Name="hist" Height="146" Margin="209,141,60,0" VerticalAlignment="Top" MouseDoubleClick="hist_MouseDoubleClick" Grid.Column="3" SelectionChanged="hist_SelectionChanged" KeyDown="hist_KeyDown" KeyUp="hist_KeyUp"/>
+            <Button x:Name="clear" Content="Effacer" HorizontalAlignment="Left" Height="31" Margin="230,50,0,0" VerticalAlignment="Top" Width="105" Click="clear_Click" FontWeight="Bold" Grid.Column="3"/>
+            <Label x:Name="affichageSelection" Content="" HorizontalAlignment="Left" Height="35" Margin="209,100,0,0" VerticalAlignment="Top" Width="140" BorderBrush="gray" BorderThickness="1" Grid.Column="3"/>
+            <Button x:Name="ann" Content="Annulé" HorizontalAlignment="Left" Height="19" Margin="73,50,0,0" VerticalAlignment="Top" Width="91" Click="ann_Click" Grid.Column="3"/>
+            <TextBox Grid.Column="2" HorizontalAlignment="Left" Height="26" Margin="19,33,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="128" x:Name="test"/>
+
+        </Grid>
+    </DockPanel>
+
+</Window>
