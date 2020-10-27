@@ -18,7 +18,7 @@ using Microsoft.Win32;
 namespace Apllication1
 {
 
-    // hfuizdfuzuzghoiuzhd ou PUSH
+    // hfuizdfuzuzghoiuzhd ou PUSH 22222222222
 
     public partial class MainWindow : Window
     {
